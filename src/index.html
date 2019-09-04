@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Zeo Alliance test task</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="controls">
+    <div onclick="openPopup()" class="button button--main">Open popup</div>
+</div>
+
+<div onclick="closePopup(event)" id="popup" class="popup">
+    <div class="window">
+        <div class="window__heading">
+            <div class="window__heading__close">
+                <div onclick="closePopup(event)" class="icon icon--small icon--close"></div>
+            </div>
+            <div class="window__heading__label"></div>
+        </div>
+        <div class="window__body">
+
+            <div class="window__body__icon">
+                <div class="icon icon--large icon--warning"></div>
+            </div>
+            <div class="window__body__description">
+                Are you sure you want to uninstall the Shazam app?
+            </div>
+            <div class="window__body__actions">
+                <button onclick="closePopup(event)" class="button">Cancel</button>
+                <button onclick="closePopup(event, () => { setTimeout(function() { alert('DONE'); }, 100); })"
+                        class="button button--danger">Uninstall
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

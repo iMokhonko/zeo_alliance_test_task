@@ -1,0 +1,59 @@
+@import "colors";
+
+.button {
+  display: block;
+  width: 100%;
+  outline: none;
+  border: 2px solid $defaultBorderColor;
+  text-align: center;
+  border-radius: 5px;
+  padding: 10px 5px;
+  color: $defaultTextColor;
+  font-weight: bold;
+  cursor: pointer;
+  margin-left: 20px;
+  background: #fff;
+  transition: 500ms;
+
+  &:first-child {
+    margin-left: 0;
+  }
+
+  &:hover {
+    background: #f2f2f2;
+  }
+
+  &--danger {
+    background: $dangerButtonColor;
+    border: none;
+    color: #fff;
+    border-bottom: 2px solid $dangerBorderBottomColor;
+
+    &:hover {
+      background: #b2140c;
+    }
+  }
+
+  &--main {
+    width: 200px;
+    height: 200px;
+    background: none;
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, .4);
+    font-weight: normal;
+    transition: 500ms;
+    font-size: 15px;
+    padding: 25px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:hover {
+      border-color: #fff;
+      background: rgba(255, 255, 255, .05);
+    }
+
+  }
+
+}
